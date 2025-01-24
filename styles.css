@@ -1,0 +1,232 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #008080;
+    color: white;
+    position: relative;
+}
+
+    header h2 {
+        font-size: 1.5rem; /* Adjust the font size for the line */
+    }
+
+.signup-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: blue; /* Changed to blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+    .signup-button:hover {
+        background-color: #f0f0f0;
+        transition: background-color 0.3s ease;
+    }
+
+#timer-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 255, 0.8); /* Changed to blue */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+    #timer-container span[title] {
+        position: relative;
+        cursor: pointer;
+    }
+
+        #timer-container span[title]:hover::after {
+            content: attr(title);
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.crypto-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+    .crypto-card:hover {
+        transform: scale(1.05);
+    }
+
+    .crypto-card h3 {
+        margin: 0;
+        color: #333;
+    }
+
+    .crypto-card p {
+        margin: 10px 0;
+        color: #666;
+    }
+
+    .crypto-card button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #0000ff; /* Changed to blue */
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+        .crypto-card button:focus {
+            outline: 2px solid #0000ff;
+            outline-offset: 2px;
+        }
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #008080; /* Changed to blue */
+    color: white;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    .signup-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    #timer-container {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .crypto-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h2 {
+        font-size: 1rem;
+    }
+
+    .signup-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    #timer-container {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .crypto-card {
+        width: 100%;
+    }
+}
+
+/* Style the header for the pop-up page */
+header {
+    background-color: #008080;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the price container for the pop-up page */
+#price-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style the sign-up container */
+.signup-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style the form elements */
+#signup-form input,
+#code-container input,
+#password-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#signup-form button,
+#verify-code,
+#set-password {
+    width: 100%;
+    padding: 10px;
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    #signup-form button:hover,
+    #verify-code:hover,
+    #set-password:hover {
+        background-color: #005959;
+        transition: background-color 0.3s ease;
+    }

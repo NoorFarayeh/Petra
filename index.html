@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Petra </h1>
+        <h2>Trading Dashboard</h2>
+        <button class="signup-button" onclick="window.location.href='signup.html'">Sign Up</button>
+        <div id="timer-container">
+            <span id="timer" title="You should sign up to keep this website active">60</span>
+        </div>
+    </header>
+    <main>
+        <div class="crypto-card" id="bitcoin">
+            <h3>Bitcoin</h3>
+            <p>BTC</p>
+            <button onclick="openPopup('bitcoin.html')">View Price</button>
+        </div>
+        <div class="crypto-card" id="ethereum">
+            <h3>Ethereum</h3>
+            <p>ETH</p>
+            <button onclick="openPopup('ethereum.html')">View Price</button>
+        </div>
+        <div class="crypto-card" id="solana">
+            <h3>Solana</h3>
+            <p>SOL</p>
+            <button onclick="openPopup('solana.html')">View Price</button>
+        </div>
+        <div class="crypto-card" id="tether">
+            <h3>Tether</h3>
+            <p>USDT</p>
+            <button onclick="openPopup('tether.html')">View Price</button>
+        </div>
+    </main>
+    <footer>
+        <p> &#169;  NOOR  </p>
+    </footer>
+    <script>
+        function openPopup(url) {
+            const width = 400;
+            const height = 300;
+            const left = (screen.width - width) / 2;
+            const top = (screen.height - height) / 2;
+            window.open(url, 'popup', `width=${width},height=${height},top=${top},left=${left}`);
+        }
+    </script>
+    <script src="timer.js"></script>
+</body>
+</html>
+
